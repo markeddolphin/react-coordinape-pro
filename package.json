@@ -1,0 +1,128 @@
+{
+  "name": "yearn-coordinape-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "1.x",
+    "@ethersproject/providers": "^5.0.19",
+    "@ethersproject/units": "^5.0.9",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@material-ui/pickers": "^3.3.10",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@web3-react/core": "^6.1.1",
+    "@web3-react/fortmatic-connector": "^6.1.6",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/portis-connector": "^6.1.6",
+    "@web3-react/walletconnect-connector": "^6.1.6",
+    "@web3-react/walletlink-connector": "^6.1.6",
+    "async-sema": "^3.1.0",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "d3-force-3d": "^2.2.0",
+    "date-fns": "^2.21.1",
+    "ethers": "^5.0.26",
+    "history": "^5.0.0",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.0.22",
+    "lodash": "^4.17.20",
+    "logdown": "^3.3.1",
+    "moment": "^2.29.1",
+    "node-sass": "^5.0.0",
+    "notistack": "^1.0.4",
+    "polished": "^4.0.5",
+    "react": "^17.0.1",
+    "react-data-table-component": "^6.11.7",
+    "react-dom": "^17.0.1",
+    "react-force-graph-2d": "^1.19.1",
+    "react-i18next": "^11.8.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-string-replace": "^0.4.4",
+    "react-virtualized-auto-sizer": "^1.0.5",
+    "recoil": "^0.3.1",
+    "source-map-explorer": "^2.5.2",
+    "styled-components": "^5.2.3",
+    "typescript": "^4.1.3",
+    "web-vitals": "^1.1.0"
+  },
+  "resolutions": {
+    "canvas-color-tracker": "file:./canvas-color-tracker"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:local": "react-scripts  --max_old_space_size=4096 build",
+    "build:gzip": "react-scripts build && gzipper --verbose ./build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format:staged": "lint-staged",
+    "lint": "eslint",
+    "lint:check": "eslint \"./src/**/*.{js,ts,tsx}\"",
+    "lint:fix": "yarn lint:check --fix",
+    "prettier": "prettier './src/**/*.{js,ts,tsx}'",
+    "prettier:check": "yarn prettier --check",
+    "prettier:fix": "yarn prettier --write",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty",
+      "pre-push": "yarn lint:check"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-virtualized-auto-sizer": "^1.0.0",
+    "@types/recoilize": "^0.8.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "pretty-quick": "^3.1.0",
+    "recoilize": "^2.0.1"
+  }
+}
